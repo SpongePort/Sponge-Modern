@@ -2,8 +2,7 @@
 /*** File Table ***/
 /******************/
 
-#ifndef	__FILE_TABLE___
-#define	__FILE_TABLE___
+#pragma once
 
 /*******************************************************************************/
 enum	FILEPOS_ENUM
@@ -38,5 +37,3 @@ enum	FILEPOS_ENUM
 void	CalcFilePos(int *Dst);
 
 /*******************************************************************************/
-
-#endif

@@ -2,6 +2,12 @@
 /*** File Table ***/
 /******************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <libcd.h>
+
+#include "fileio/filetab.h"
+
 /*******************************************************************************/
 char	*FilenameList[FILEPOS_MAX]=
 {

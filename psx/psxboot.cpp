@@ -10,8 +10,32 @@
 #include	<libsnd.h>
 #include	<stdio.h>
 
-#include 	"PSXBOOT.H"
-#include	"fileio\filetab.h"
+#include	"fileio/filetab.h"
+
+/*****************************************************************************/
+// Screen position and dimensions. 
+#define	FRAME_X			512
+
+#ifdef	__TERRITORY_USA__
+#define	FRAME_Y			240
+#define	SCREEN_X		0 //-24
+#define	SCREEN_Y		-8 
+#else
+#define	FRAME_Y			256
+#define	SCREEN_X		0 //-8
+#define	SCREEN_Y		8
+#endif // NTSC
+
+/*---------------------------------------------------------------------------------------------------------*/
+#define         LoadBuffer		0x80010000              // psx boot
+#define         BinLoadAddr		0x80010000              // psx boot
+
+/*****************************************************************************/
+typedef struct 
+{
+	DRAWENV		draw;
+	DISPENV		disp;
+} DB;
 
 #define	PiracyFilename	"\\PIRACY.GFX;1"
 #define	LegalFilename	"\\LEGAL.GFX;1"

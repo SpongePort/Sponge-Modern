@@ -37,7 +37,7 @@
 
 /*	Other Libs
 	---------- */
-#include "..\..\tools\vlc\include\vlc_bit.h"
+#include "vlc_bit.h"
 
 
 // #define	FORCE_FMV	1	
