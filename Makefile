@@ -11,4 +11,4 @@ CXXFLAGS := -std=c++20 $(CFLAGS)
 
 SRCS := $(filter-out $(wildcard $(SRC_DIR)/**/main.cpp), $(wildcard $(SRC_DIR)/**/*.cpp)) $(SRC_DIR)/$(PLATFORM_DIR)/main.cpp
 
-include nugget/common.mk
+include thirdparty/nugget/common.mk

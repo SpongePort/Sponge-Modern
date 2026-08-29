@@ -9,4 +9,4 @@ CXXFLAGS := -std=c++20 $(CFLAGS)
 
 SRCS := psx/psxboot.cpp
 
-include nugget/common.mk
+include thirdparty/nugget/common.mk
