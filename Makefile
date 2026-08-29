@@ -25,6 +25,7 @@ CFLAGS :=	-std=gnu11 \
 			-fpermissive \
 			$(INCS) \
 			$(DEFS)
+CXXFLAGS := -std=c++20 $(CFLAGS)
 
 SRC_DIR := src
 BUILD_DIR := build
@@ -32,4 +33,4 @@ PLATFORM_DIR := $(shell echo $(PLATFORM) | tr A-Z a-z)
 
 SRCS := $(filter-out $(wildcard $(SRC_DIR)/**/main.cpp), $(wildcard $(SRC_DIR)/**/*.cpp)) $(SRC_DIR)/$(PLATFORM_DIR)/main.cpp
 
-include psyz/psyz/psx.mk
+include nugget/common.mk

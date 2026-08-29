@@ -1,0 +1,8 @@
+*.dep
+*.o
+*.a
+*.elf
+*.ps-exe
+*.map
+Overlay.*
+!lib/VLC_BIT.o
