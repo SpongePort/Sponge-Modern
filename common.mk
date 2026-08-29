@@ -4,7 +4,7 @@ USER := CDBUILD
 FILE_SYSTEM := PC
 PLATFORM := PC
 
-INCS :=  	-Iinclude -Isrc
+INCS :=  	-Iinclude -Isrc -Ipsyq/include
 
 DEFS :=  	-D__USER_$(USER)__ \
 			-D__VERSION_$(VERSION)__ \
@@ -16,10 +16,11 @@ DEFS :=  	-D__USER_$(USER)__ \
 			-DTARGET_${TARGET} \
 			-D_LANGUAGE_C_PLUS_PLUS
 
-LIBS :=     -lc -lapi -letc -lspu -lsnd \
+LIBS :=     -Lpsyq/lib -Llib \
+			-lc -lapi -letc -lspu -lsnd \
             -lgpu -lcard -lpress \
             -lcd -ltap -lcomb -lmcrd \
-            -lgte -lpad -lds
+            -lgte -lpad -lds -lxmplay
 
 COMMON_FLAGS := $(INCS) $(DEFS) $(LIBS)
 

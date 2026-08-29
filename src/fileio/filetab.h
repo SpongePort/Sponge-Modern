@@ -35,6 +35,8 @@ enum	FILEPOS_ENUM
 	FILEPOS_MAX
 };
 
+void	CalcFilePos(int *Dst);
+
 /*******************************************************************************/
 
 #endif

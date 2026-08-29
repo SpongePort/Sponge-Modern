@@ -6,3 +6,4 @@
 *.map
 Overlay.*
 !lib/VLC_BIT.o
+psyq/
