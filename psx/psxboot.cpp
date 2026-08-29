@@ -10,9 +10,8 @@
 #include	<libsnd.h>
 #include	<stdio.h>
 
-#include 	"psxboot\PsxBoot.H"
+#include 	"PSXBOOT.H"
 #include	"fileio\filetab.h"
-#include	"fileio\filetab.cpp"
 
 #define	PiracyFilename	"\\PIRACY.GFX;1"
 #define	LegalFilename	"\\LEGAL.GFX;1"
