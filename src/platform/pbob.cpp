@@ -38,7 +38,7 @@ void CNpcBobbingPlatform::processMovement( int _frames )
 		CPlayer *player = GameScene.getPlayer();
 		DVECTOR const &playerPos = player->getPos();
 
-		int height = player->getHeightFromGroundNoPlatform( playerPos.vx, playerPos.vy );
+		int height = player->getHeightFromGroundNoPlatform( playerPos.vx, playerPos.vy, 32 );
 
 		// if stood on, increase velocity
 

@@ -289,7 +289,7 @@ int CSaveLoadDatabase::getLoadStatus()
 			if(s_callbackStatus==MemCard::CCS_ReadFileOK&&
 			   MemCard::TestCheckSum(&m_tempBuffer[m_bufferSize-MD5_CHECKSUM_SIZE],m_tempBuffer,m_bufferSize-MD5_CHECKSUM_SIZE))
 			{
-				memcpy(&m_dataBuffer,&m_tempBuffer[256],sizeof(m_dataBuffer));
+				memcpy((unsigned char*)&m_dataBuffer,&m_tempBuffer[256],sizeof(m_dataBuffer));
 				if(m_dataBuffer.m_headerId!=SAVELOAD_HEADERID)
 				{
 					ASSERT(!"YOUR MEMCARD SAVE IS OUT OF DATE! PLEASE DELETE IT!");

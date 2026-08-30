@@ -245,9 +245,9 @@ public:
 	void			setRespawnPosAndRingTelephone(DVECTOR const &_respawn);
 
 	// This isn't funny anymore.. :(
-	int				getHeightFromGround(int _x,int _y,int _maxHeight=32);
-	int				getHeightFromPlatformNoGround(int _x,int _y,int _maxHeight=32);
-	int				getHeightFromGroundNoPlatform(int _x,int _y,int _maxHeight=32);
+	int				getHeightFromGround(int _x,int _y,int _maxHeight);
+	int				getHeightFromPlatformNoGround(int _x,int _y,int _maxHeight);
+	int				getHeightFromGroundNoPlatform(int _x,int _y,int _maxHeight);
 
 	void			setLedgeLookAhead(int _lookAhead);
 
@@ -263,12 +263,13 @@ public:
 	DVECTOR			*getMoveVelocity()									{return &m_moveVelocity;}
 	void			setMoveVelocity(const DVECTOR *_moveVelocity)		{m_moveVelocity=*_moveVelocity;}
 //--- Prompt Stuff
-private:
+
 	struct	sPromptData
 	{
 		u16					m_input;
 		int					Text;
 	};
+private:
 	struct	sPromptTable
 	{
 		const sPromptData	*Data;
@@ -352,7 +353,7 @@ private:
 	{
 		int							m_animNumber;
 		int							m_numAnimFrameSfx;
-		const struct AnimFrameSfx	*m_animFrameSfx;
+		const AnimFrameSfx	*m_animFrameSfx;
 	} AnimSfx;
 	static const AnimSfx	s_animSfx[];
 	static const int		s_numAnimSfx;

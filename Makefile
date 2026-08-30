@@ -2,8 +2,7 @@ include common.mk
 
 TARGET = Spongey
 TYPE = ps-exe
-CFLAGS +=	-std=gnu11 \
-			-w \
+CFLAGS +=	-w \
 			-g \
 			-fpermissive \
 			$(COMMON_FLAGS)

@@ -516,7 +516,7 @@ void MemCard::FillHeaderDetails( unsigned char *HeaderBase, int FileLength, char
 
 	// Fill in the details
 	HeaderBase[ 3 ] = (char)BlockCount;
-	memcpy( &HeaderBase[ 4 ], ASCIItoJIS( realFilename ), 64 );
+	memcpy( &HeaderBase[ 4 ], (unsigned char*)ASCIItoJIS( realFilename ), 64 );
 
 	return;
 }
@@ -917,7 +917,7 @@ void MemCard::HandleCmd_ReadFileInfo( void )
 				{
 					// Yup
 					int FileNumber = s_cardData[ s_currentChannel ].m_nativeFileCount++;
-					memcpy( s_cardData[ s_currentChannel ].m_nativeFileInfo[ FileNumber ].m_sjisName, &s_tempFileInfoBuffer[ 4 ], COMPRESSEDNAMESIZE );
+					memcpy( (unsigned char*)s_cardData[ s_currentChannel ].m_nativeFileInfo[ FileNumber ].m_sjisName, &s_tempFileInfoBuffer[ 4 ], COMPRESSEDNAMESIZE );
 					s_cardData[ s_currentChannel ].m_nativeFileInfo[ FileNumber ].m_blocks = (char)s_tempFileInfoBuffer[ 3 ];
 					s_cardData[ s_currentChannel ].m_nativeFileInfo[ FileNumber ].m_dirEntry = s_file;
 				}

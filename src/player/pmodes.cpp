@@ -205,8 +205,8 @@ int		CPlayerMode::getHeightFromGound()
 	int				height[2];
 	DVECTOR	const &pos=getPlayerPos();
 
-	height[0]=m_player->getHeightFromGround(pos.vx-checkx,pos.vy);
-	height[1]=m_player->getHeightFromGround(pos.vx+checkx,pos.vy);
+	height[0]=m_player->getHeightFromGround(pos.vx-checkx,pos.vy,32);
+	height[1]=m_player->getHeightFromGround(pos.vx+checkx,pos.vy,32);
 
 	return height[0]<height[1]?height[0]:height[1];
 }
