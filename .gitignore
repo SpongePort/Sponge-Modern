@@ -5,5 +5,5 @@
 *.ps-exe
 *.map
 Overlay.*
-!lib/VLC_BIT.o
+!lib/*.a
 psyq/

@@ -24,7 +24,7 @@ LDFLAGS +=  -Llib \
 			-lc -lapi -letc -lspu -lsnd \
             -lgpu -lcard -lpress \
             -lcd -ltap -lcomb -lmcrd \
-            -lgte -lpad -lds -lxmplay \
+            -lgte -lpad -lds -lxmplay -lvlc_bit \
 			-Wl,--end-group
 
 
