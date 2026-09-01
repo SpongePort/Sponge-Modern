@@ -2,6 +2,8 @@
 #ifndef __SYSTEM_LNKOPT_H__
 #define __SYSTEM_LNKOPT_H__
 
+#include "system/types.h"
+
 enum FILE_SYSTEM
 {
 	FS_PC		=0,

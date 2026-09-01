@@ -7,7 +7,7 @@
 
 #include "system\global.h"
 #include "system\clickcount.h"
-#include "system/gp.h"
+//#include "system/gp.h"
 
 
 /*****************************************************************************/
@@ -23,11 +23,11 @@ static const int COUNTS_PER_FRAME_EXTERNAL = 4096;
 /*****************************************************************************/
 void clockTicker()
 {
-	u32	thisGp;
-	thisGp=ReloadGP();
+	//u32	thisGp;
+	//thisGp=ReloadGP();
 
 	CClickCount::updateCurrentTime();
-	SetGP(thisGp);
+	//SetGP(thisGp);
 }
 
 /*****************************************************************************/

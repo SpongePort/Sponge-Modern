@@ -9,11 +9,6 @@ SRCS += $(THISDIR)thirdparty/nugget/common/syscalls/printf.s
 CPPFLAGS += -I$(THISDIR)thirdparty/nugget/psyq/include -I$(THISDIR)psyq-4_7-converted/include -I$(THISDIR)psyq-4.7-converted-full/include -I$(THISDIR)psyq/include 
 LDFLAGS += -L$(THISDIR)thirdparty/nugget/psyq/lib -L$(THISDIR)psyq-4_7-converted/lib -L$(THISDIR)psyq-4.7-converted-full/lib -L$(THISDIR)psyq/lib
 
-VERSION := DEBUG
-TERRITORY := USA
-USER := CDBUILD
-FILE_SYSTEM := PC
-
 CPPFLAGS += -Iinclude -Isrc \
 			-D__USER_$(USER)__ \
 			-D__VERSION_$(VERSION)__ \

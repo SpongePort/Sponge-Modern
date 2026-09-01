@@ -18,7 +18,7 @@
 #include 	<libapi.h>
 #include 	<inline_c.h>
 #include 	<sys\types.h>
-#include 	"utils\replace.h"
+//#include 	"utils\replace.h"
 #include 	<gtemac.h>
 
 /*****************************************************************************/

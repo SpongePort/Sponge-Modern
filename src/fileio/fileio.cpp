@@ -9,7 +9,7 @@
 #else
 #include	"fileio\cdfile.h"
 #endif
-#include	"utils\replace.h"
+//#include	"utils\replace.h"
 #include	"utils\utils.h"
 
 //#define	FILEIO_DBG
@@ -166,7 +166,7 @@ int	ThisLoadSize;
 				CheckChunk();
 				ThisLoadSize=BigLump.LoadLeft;
 				if (ThisLoadSize>BigLump.ChunkLeft) ThisLoadSize=BigLump.ChunkLeft;
-	        	if (BigLump.DstPtr) MCmemcpy(BigLump.DstPtr, BigLump.ChunkPtr, ThisLoadSize );
+	        	if (BigLump.DstPtr) /*MC*/memcpy(BigLump.DstPtr, BigLump.ChunkPtr, ThisLoadSize );
 
 				BigLump.ChunkLeft-=ThisLoadSize; 
 				BigLump.DstPtr+=ThisLoadSize;

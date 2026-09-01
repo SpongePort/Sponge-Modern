@@ -14,7 +14,7 @@
 #include	"utils\utils.h"
 #include	"gfx\actor.h"
 
-#include 	"system\gp.h"
+//#include 	"system\gp.h"
 
 // scenes
 #include "game\game.h"
@@ -125,7 +125,7 @@ static void DoAutoLoad()
 void	InitSystem()	// reordered to reduce black screen (hope all is well
 {
 	ResetCallback();
-	SaveGP();
+	//SaveGP();
 	SetSp(GetSp()|0x807f0000);
 //	SetDispMask(0);
 

@@ -176,7 +176,7 @@ RECT		Rect;
 void	AddAnimTexToList(sTPageInfo	*Cache,sFrameHdr *FramePtr,int Frm,int TPage,int Half)
 {
 	
-		MCmemcpy(&Cache->AnimTexFrame[Cache->AnimTexCount].FrameHdr,FramePtr,sizeof(sFrameHdr));
+		/*MC*/memcpy((u8*)&Cache->AnimTexFrame[Cache->AnimTexCount].FrameHdr,(u8*)FramePtr,sizeof(sFrameHdr));
 		Cache->AnimTexFrame[Cache->AnimTexCount].Frame=Frm;
 		Cache->AnimTexCount++;
 }
@@ -262,7 +262,7 @@ int			ReadLeft;
 		FramePtr=(sFrameHdr*)MemAlloc(ReadLeft,"TPLoadTemp");
 		CFileIO::ReadFile(FramePtr,ReadLeft);
 		CFileIO::CloseFile();
-		MCmemcpy(*hdrs,FramePtr,TPHdr.NoOfFrames*sizeof(sFrameHdr));	
+		/*MC*/memcpy((u8*)*hdrs,(u8*)FramePtr,TPHdr.NoOfFrames*sizeof(sFrameHdr));	
 		MemFree(FramePtr);
 		}
 	else
@@ -280,7 +280,7 @@ int			ReadLeft;
 		CFileIO::ReadFile(FramePtr,ReadLeft);
 		CFileIO::CloseFile();
 		VRAMData=(u32*)	MakePtr(FramePtr,TPHdr.NoOfFrames*sizeof(sFrameHdr));
-		MCmemcpy(*hdrs,FramePtr,TPHdr.NoOfFrames*sizeof(sFrameHdr));	
+		/*MC*/memcpy((u8*)*hdrs,(u8*)FramePtr,TPHdr.NoOfFrames*sizeof(sFrameHdr));	
 		TPLoadVRam(&TPHdr, TPage,Half,VRAMData);
 		Cache=&s_TPCache[TPage].Info[Half];
 		MemFree(FramePtr);
