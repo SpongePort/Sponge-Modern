@@ -1,10 +1,10 @@
 TARGET = Spongey
-CPPFLAGS = -w -g -fpermissive
+CPPFLAGS = -w -g -fpermissive -fno-use-cxa-atexit
 
 VERSION := FINAL
 TERRITORY := USA
 USER := CDBUILD
-FILE_SYSTEM := PC
+FILE_SYSTEM := CD
 
 SRCS = $(wildcard src/**/*.cpp)) src/system/$(VERSION)/$(TERRITORY)/$(FILE_SYSTEM)/info.cpp
 

@@ -4,7 +4,7 @@
 
 #include	"system\global.h"
 #include	"fileio\fileio.h"
-#if			__FILE_SYSTEM__==PC
+#if			__FILE_SYSTEM_PC__
 #include	"fileio\pcfile.h"
 #else
 #include	"fileio\cdfile.h"
@@ -62,7 +62,7 @@ DataBankEquate	CFileIO::CurrentDataBank=DATABANK_MAX;
 //sFAT	*FAT;
 void	CFileIO::Init()
 {
-#if		__FILE_SYSTEM__==PC
+#if		__FILE_SYSTEM_PC__
 		FileIO=new ("CFileIO::FileIOInit") CPCFileIO(LumpNames[DataLump],&BigLump);
 #else
 		FileIO=new ("CFileIO::FileIOInit") CCDFileIO(0,&BigLump);
