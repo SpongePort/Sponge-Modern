@@ -1,11 +1,21 @@
-TARGET = Spongey
-CPPFLAGS = -w -g -fpermissive -fno-use-cxa-atexit
-
 VERSION := FINAL
 TERRITORY := USA
 USER := CDBUILD
-FILE_SYSTEM := CD
+FILE_SYSTEM := PC
 
-SRCS = $(wildcard src/**/*.cpp)) src/system/$(VERSION)/$(TERRITORY)/$(FILE_SYSTEM)/info.cpp
+boot:
+	$(MAKE) -C boot
+spongey:
+	$(MAKE) -C src
 
-include common.mk
+clean:
+	$(MAKE) -C boot clean
+	$(MAKE) -C src clean
+
+all:
+	$(MAKE) -C boot
+	$(MAKE) -C src
+	
+# declare phony rules
+.PHONY: boot spongey \
+		clean all

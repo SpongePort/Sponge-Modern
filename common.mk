@@ -9,7 +9,7 @@ SRCS += $(THISDIR)thirdparty/nugget/common/syscalls/printf.s
 CPPFLAGS += -I$(THISDIR)thirdparty/nugget/psyq/include -I$(THISDIR)psyq-4_7-converted/include -I$(THISDIR)psyq-4.7-converted-full/include -I$(THISDIR)psyq/include 
 LDFLAGS += -L$(THISDIR)thirdparty/nugget/psyq/lib -L$(THISDIR)psyq-4_7-converted/lib -L$(THISDIR)psyq-4.7-converted-full/lib -L$(THISDIR)psyq/lib
 
-CPPFLAGS += -Iinclude -Isrc \
+CPPFLAGS += -I$(THISDIR)include -I$(THISDIR)src \
 			-D__USER_$(USER)__ \
 			-D__VERSION_$(VERSION)__ \
 			-D__TERRITORY_$(TERRITORY)__ \
@@ -19,11 +19,11 @@ CPPFLAGS += -Iinclude -Isrc \
 			-D__FILE_SYSTEM_STR__=$(FILE_SYSTEM) \
 			-D_LANGUAGE_C_PLUS_PLUS
 
-LDFLAGS +=  -Llib \
+LDFLAGS +=  -L$(THISDIR)lib \
 			-Wl,--start-group \
 			-lc -lapi -letc -lspu -lsnd \
             -lgpu -lcard -lpress \
-            -lcd -ltap -lcomb -lmcrd \
+            -lcd -lmcrd \
             -lgte -lpad -lds -lxmplay -lvlc_bit \
 			-Wl,--end-group
 
