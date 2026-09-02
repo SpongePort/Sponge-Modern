@@ -2,7 +2,8 @@
 /*** File Table ***/
 /******************/
 
-#pragma once
+#ifndef	__FILE_TABLE___
+#define	__FILE_TABLE___
 
 /*******************************************************************************/
 enum	FILEPOS_ENUM
@@ -34,6 +35,6 @@ enum	FILEPOS_ENUM
 	FILEPOS_MAX
 };
 
-void	CalcFilePos(int *Dst);
-
 /*******************************************************************************/
+
+#endif

@@ -1,6 +1,6 @@
 TARGET = PsxBoot
-CPPFLAGS = -O2 -g
+CPPFLAGS = -O2 -g -c
 
-SRCS = ../src/fileio/filetab.cpp psxboot.cpp
+SRCS = psxboot.cpp
 
 include ../common.mk
