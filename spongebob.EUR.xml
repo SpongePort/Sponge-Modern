@@ -1,0 +1,21 @@
+<iso_project image_name="out/spongebob.EUR.bin" cue_sheet="out/spongebob.EUR.cue">
+    <track type="data" cdvd_style="false">
+        <identifiers system="PLAYSTATION" application="PLAYSTATION" volume="SLES_03704" publisher="THQ" copyright="NICKELODEON" creation_date="2001091412000000+0"/>
+        <license file="out/EUR/license_data.dat"/>
+        <default_attributes gmt_offs="36" xa_attrib="56" xa_perm="1365" xa_gid="0" xa_uid="0"/>
+        <directory_tree source="out/EUR" gmt_offs="0">
+            <file name="BIGLUMP.BIN" type="data" date="20010118104356"/>
+            <file name="SLES_037.04" type="data" date="20010118104358" source="boot/PsxBoot.ps-exe"/>
+            <file name="LEGAL.GFX" type="data" date="20010118104356"/>
+            <file name="SPONGEY.BIN" type="data" date="20010118104356"/>
+            <file name="SYSTEM.CNF" type="data" date="20010118104358"/>
+            <file name="INTRO.STR" type="mixed" date="20010417162920"/>
+            <file name="THQ.STR" type="mixed" date="20010417162908"/>
+            <file name="TRACK1.IXA" type="mixed" date="20010503132224"/>
+            <file name="CLIMAX.STR" type="mixed" date="20010705171238"/>
+            <file name="DEMO.STR" type="mixed" date="20010828170832"/>
+            <file name="ZZZZZZZZ.ZZZ" type="data" date="20001018124452"/>
+            <dummy sectors="150" type="32"/>
+        </directory_tree>
+    </track>
+</iso_project>

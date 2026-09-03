@@ -4,7 +4,6 @@
 *.elf
 *.ps-exe
 *.map
-Overlay.*
 !lib/*.a
 psyq/
 disc/

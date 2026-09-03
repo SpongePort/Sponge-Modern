@@ -3,24 +3,37 @@ TERRITORY = USA
 USER = CDBUILD
 FILE_SYSTEM = CD
 
+OVERLAYSCRIPT  ?= overlay.ld
+OVERLAYSECTION ?= .spongey
+
+# Assets rule
+# Use generated xml as .assets file so it won't extract more than once
+disc/$(TERRITORY)/.assets:
+	@dumpsxiso -x disc/$(TERRITORY) -s disc/$(TERRITORY)/.assets disc/spongebob.$(TERRITORY).cue
+
+# Boot executable rule
+# Builds PsxBoot
 boot:
 	$(MAKE) -C boot VERSION=$(VERSION) TERRITORY=$(TERRITORY) USER=$(USER) FILE_SYSTEM=$(FILE_SYSTEM)
-spongey:
-	$(MAKE) -C src VERSION=$(VERSION) TERRITORY=$(TERRITORY) USER=$(USER) FILE_SYSTEM=$(FILE_SYSTEM)
-cd:
-	@dumpsxiso -x disc/$(TERRITORY) -s disc/spongebob.$(TERRITORY).xml disc/spongebob.$(TERRITORY).cue
 
+# Game overlay rule
+# Builds SPONGEY.BIN
+source:
+	$(MAKE) -C src VERSION=$(VERSION) TERRITORY=$(TERRITORY) USER=$(USER) FILE_SYSTEM=$(FILE_SYSTEM)
+
+# Cleans everything up
 clean:
-	@rm -rf disc/USA disc/EUR disc/*.xml out
+	@rm -rf out
 	$(MAKE) -C boot clean
 	$(MAKE) -C src clean
 
-all:
+# Builds the game
+all: disc/$(TERRITORY)/.assets
 	@mkdir -p out
 	@cp -r disc/$(TERRITORY) out/$(TERRITORY)
-	$(MAKE) -C boot VERSION=$(VERSION) TERRITORY=$(TERRITORY) USER=$(USER) FILE_SYSTEM=$(FILE_SYSTEM)
-	$(MAKE) -C src VERSION=$(VERSION) TERRITORY=$(TERRITORY) USER=$(USER) FILE_SYSTEM=$(FILE_SYSTEM)
-	
-# declare phony rules
-.PHONY: boot spongey cd \
-		clean all
+	$(MAKE) boot
+	$(MAKE) source
+	@mkpsxiso spongebob.$(TERRITORY).xml
+
+# Phony rules
+.PHONY: boot source clean all

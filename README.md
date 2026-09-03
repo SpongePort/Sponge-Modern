@@ -6,9 +6,9 @@ This is very much a work in progress!! The system may not function as intended r
 
 # Building
 
-Follow the toolchain installation instructions for your OS (here)[https://github.com/ABelliqueux/nolibgs_hello_worlds]
+Follow the toolchain installation instructions for your OS [here](https://github.com/ABelliqueux/nolibgs_hello_worlds)
 
-Install (mkpsxiso)[https://github.com/lameguy64/mkpsxiso] for your OS (just drop the executables in ``/usr/bin`` or wherever)
+Install [mkpsxiso](https://github.com/lameguy64/mkpsxiso) for your OS (just drop the executables in ``/usr/bin`` or wherever)
 
 Clone the repository RECURSIVELY!
 
