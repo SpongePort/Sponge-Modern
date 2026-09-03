@@ -7,3 +7,6 @@
 Overlay.*
 !lib/*.a
 psyq/
+disc/
+!disc/README.md
+out/
