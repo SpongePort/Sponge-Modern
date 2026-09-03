@@ -23,14 +23,12 @@ source:
 
 # Cleans everything up
 clean:
-	@rm -rf out
+	rm -rf spongebob.*.bin spongebob.*.cue
 	$(MAKE) -C boot clean
 	$(MAKE) -C src clean
 
 # Builds the game
 all: disc/$(TERRITORY)/.assets
-	@mkdir -p out
-	@cp -r disc/$(TERRITORY) out/$(TERRITORY)
 	$(MAKE) boot
 	$(MAKE) source
 	@mkpsxiso spongebob.$(TERRITORY).xml

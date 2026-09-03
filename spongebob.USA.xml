@@ -1,9 +1,9 @@
-<iso_project image_name="out/spongebob.USA.bin" cue_sheet="out/spongebob.USA.cue">
+<iso_project image_name="spongebob.USA.bin" cue_sheet="spongebob.USA.cue">
     <track type="data" cdvd_style="false">
         <identifiers system="PLAYSTATION" application="PLAYSTATION" volume="SLUS_01352" publisher="THQ" data_preparer="THQ" copyright="NICKELODEON" creation_date="2001082909000000+0"/>
-        <license file="out/USA/license_data.dat"/>
+        <license file="disc/USA/license_data.dat"/>
         <default_attributes gmt_offs="36" xa_attrib="56" xa_perm="1365" xa_gid="0" xa_uid="0"/>
-        <directory_tree source="out/USA" gmt_offs="0">
+        <directory_tree source="disc/USA" gmt_offs="0">
             <file name="BIGLUMP.BIN" type="data" date="20010118104356"/>
             <file name="SLUS_013.52" type="data" date="20010118104358" source="boot/PsxBoot.ps-exe"/>
             <file name="LEGAL.GFX" type="data" date="20010118104356"/>
